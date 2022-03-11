@@ -17,7 +17,7 @@ Site published at: https://belute.github.io/Select_dog_breed/
 
 ## Authors
 
-Justinas: [Github](.......)
+Justinas: [Github](https://github.com/Belute)
 
 ## Code sample
 
