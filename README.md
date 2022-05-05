@@ -1,12 +1,12 @@
 
 
-# Dog breed
+# Select Dog Breed
 
 
 
-This project is for **educational** porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
+This project is for **educational** porpuses only. 
 
-Site published at: https://belute.github.io/Select_dog_breed/
+Site published at: https://belute.github.io/Select_dog_breed_API/
 
 
 ## Project features
@@ -14,6 +14,7 @@ Site published at: https://belute.github.io/Select_dog_breed/
 
 -   CSS
 -   JS
+-   html
 
 ## Authors
 
@@ -21,38 +22,17 @@ Justinas: [Github](https://github.com/Belute)
 
 ## Code sample
 
-```async function getBySeason() {
-    const requestURL = `https://dog.ceo/api/breeds/list/all`
-    const request = new Request(requestURL);
-    const response = await fetch(request);
-    const data = await response.json();
-    console.log(data)
-    return data;
+```css
+#rezultatas img{
+  text-align: center;
 }
 
-async function getImg(breed) {
-    const requestURL = `https://dog.ceo/api/breed/` + breed + `/images/random`;
-    const request = new Request(requestURL);
-    const response = await fetch(request);
-    const data = await response.json();
-
-    const img = document.getElementById("img")
-    img.src = data.message
-    console.log(data)
-    return data;
+#rezultatas img {
+  max-width:320px;
 }
+```
 
-getBySeason().then(data => {
-    // console.log(data.message)
-    let objectLength = Object.keys(data.message).length
-    let aa = Object.values(data.message)
-    const propertyNames = Object.keys(data.message);
-    let array = Object.values(propertyNames)
-    bb = Object.values(aa)
-
-
-
-
+``` js
 
     for (let i = 0; i < objectLength; i++) {
 
@@ -75,25 +55,23 @@ getBySeason().then(data => {
 
 })
 
-
-document.getElementById("btn").addEventListener('click', () => {
-    let breed = document.querySelector('select').value
-    console.log(breed)
-    getImg(breed)
-    console.log("Labas")
-    console.log(breed)
-
-})
+```
+```html
+<main>
 
 
+        <div id="rezultatas">
+            <img id=img src=""></img>
+        </div>
+
+        <button id=btn class="findBreed"></button>
+
+        </div>
+        <select id="batchSelect">
 
 
+        </select>
 
-
-
-
-
-
-
+    </main>
 
 ```
